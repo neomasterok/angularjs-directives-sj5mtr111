@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+  <h2 class="card-header" ng-click="collapse(state)">{{user.name}}</h2>
+  <ul class="list-group list-group-flush" ng-show="state.collapsed">
+    <li class="list-group-item text-muted">
+      {{ user.topic }}
+    </li>
+  </ul>
+  
+  <div ng-show="state.collapsed">
+    <friends users="user.friends" collapse="collapse" ></friends>        
+  </div>
+</div>
